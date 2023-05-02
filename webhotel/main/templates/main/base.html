@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom" data-bs-theme="light">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none" style="margin-left: 15px">
+          <img src="https://cdn-icons-png.flaticon.com/512/481/481621.png" style="width: 50px; height: 50px; margin-right: 15px>
+          <span class="letter"></span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'home' %}">Головна</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'about' %}">Номери</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'services' %}">Послуги</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'create' %}">Забронювати</a>
+      </nav>
+    </div>
+
+
+        {% block body %}{% endblock %}
+
+
+<div class="container">
+  <footer class="py-5" style=" bottom: 0">
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2023 Карпати</p>
+      <ul class="list-unstyled d-flex">
+          <a href="https://instagram.com/ruslan_gorbal?igshid=ZDdkNTZiNTM="><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" style="width: 24px; height: 24px"></a>
+          <a href="https://www.facebook.com/profile.php?id=100013220736020"><img src="https://www.facebook.com/images/fb_icon_325x325.png" style="width: 24px; height: 24px; margin-left: 5px"></a>
+      </ul>
+    </div>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
