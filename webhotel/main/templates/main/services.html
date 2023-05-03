@@ -1,19 +1,9 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Сторінка про нас
+Послуги
 {% endblock %}
 
 {% block body %}
     <h1>Послуги</h1>
-    {% if tasks %}
-        {% for el in tasks %}
-            <div class="alert alert-warning mt-2">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.task }}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>У нас немає записів!</p>
-    {% endif %}
 {% endblock %}

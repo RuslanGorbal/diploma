@@ -36,8 +36,7 @@ def about_business(request):
 
 
 def services(request):
-    tasks = Task.objects.order_by('-id')
-    return render(request, 'main/services.html', {'title': 'Послуги', 'tasks': tasks})
+    return render(request, 'main/services.html')
 
 
 def create(request):
@@ -56,3 +55,8 @@ def create(request):
         'error': error
     }
     return render(request, 'main/create.html', context)
+
+
+def create_receipt(request):
+    tasks = Task.objects.order_by('-id')
+    return render(request, 'main/create_receipt.html', {'title': 'Чек', 'tasks': tasks})

@@ -12,6 +12,7 @@ urlpatterns = [
     path('about_proluxe', views.about_proluxe, name='about_proluxe'),
     path('about_business', views.about_business, name='about_business'),
     path('services', views.services, name='services'),
-    path('create', views.create, name='create')
+    path('create', views.create, name='create'),
+    path('create_receipt', views.create_receipt, name='create_receipt')
 ]
 
