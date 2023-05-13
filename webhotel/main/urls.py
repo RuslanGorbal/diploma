@@ -13,6 +13,7 @@ urlpatterns = [
     path('about_business', views.about_business, name='about_business'),
     path('services', views.services, name='services'),
     path('create', views.create, name='create'),
-    path('create_receipt', views.create_receipt, name='create_receipt')
+    path('create_receipt', views.create_receipt, name='create_receipt'),
+    path('qa', views.chatbot, name='chatbot')
 ]
 
