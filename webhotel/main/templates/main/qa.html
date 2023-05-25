@@ -7,16 +7,16 @@
 {% block body %}
 <div class="container">
 
-    {% if response %}
     <h3>Відповідь:</h3>
-    <p class="lead">
+    {% if response %}
+        <p class="lead">
         {{ response|safe }}
     </p>
+    {% else %}
+        <p class="lead">Для початку вкажіть питання</p>
 {% endif %}
 
-
-<h3>Питання:</h3>
-
+<h3>Задати питання:</h3>
 <form method="post">
     {% csrf_token %}
     <input type="text" class="form-control" name="user_input">
