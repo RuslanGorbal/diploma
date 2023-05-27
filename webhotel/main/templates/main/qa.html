@@ -13,10 +13,10 @@
         {{ response|safe }}
     </p>
     {% else %}
-        <p class="lead">Для початку вкажіть питання</p>
+        <p class="lead">Для початку задайте питання</p>
 {% endif %}
 
-<h3>Задати питання:</h3>
+<h3>Ваше питання:</h3>
 <form method="post">
     {% csrf_token %}
     <input type="text" class="form-control" name="user_input">
