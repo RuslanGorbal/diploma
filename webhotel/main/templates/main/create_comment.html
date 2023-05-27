@@ -1,10 +1,11 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Чек
+Коментарі
 {% endblock %}
 
 {% block body %}
+<div class="container">
     {% if tasks %}
         {% for el in tasks %}
             <div class="alert alert-warning mt-2">
@@ -15,4 +16,6 @@
     {% else %}
         <p>У нас немає записів!</p>
     {% endif %}
+    <center><button onclick="location.href='/create'" type="button" class="btn btn-success">Коментувати</button></center>
+</div>
 {% endblock %}

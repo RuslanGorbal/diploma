@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Зробити завдання</h1>
+<div class="container">
+    <h1>Напишіть власний коментар:</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.title }}<br>
@@ -13,5 +14,6 @@
         <button type="submit" class="btn btn-success">Добавити</button>
         <span>{{ error }}</span>
     </form>
+</div>
 {% endblock %}
 
